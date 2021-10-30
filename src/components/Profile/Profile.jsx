@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import defaultImg from "assets/default.png";
 import "./Profile.scss";
 
 export default function Profile({ name, tag, location, avatar, stats }) {
@@ -30,3 +32,17 @@ export default function Profile({ name, tag, location, avatar, stats }) {
     </div>
   );
 }
+
+Profile.defaultProps = {
+  avatar: defaultImg,
+};
+
+Profile.propTypes = {
+  name: PropTypes.string.isRequired,
+  tag: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  avatar: PropTypes.string,
+  followers: PropTypes.number.isRequired,
+  views: PropTypes.number.isRequired,
+  likes: PropTypes.number.isRequired,
+};

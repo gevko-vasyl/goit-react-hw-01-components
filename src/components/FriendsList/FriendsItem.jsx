@@ -1,4 +1,7 @@
 import React from "react";
+
+import PropTypes from "prop-types";
+import defaultImg from "assets/default.png";
 import "./FriendsItem.scss";
 
 export default function FriendsItem({ avatar, name, isOnline }) {
@@ -10,3 +13,13 @@ export default function FriendsItem({ avatar, name, isOnline }) {
     </li>
   );
 }
+
+FriendsItem.defaultProps = {
+  avatar: defaultImg,
+};
+
+FriendsItem.propTypes = {
+  avatar: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  isOnline: PropTypes.bool.isRequired,
+};
