@@ -1,0 +1,9 @@
+@import "styles/shared.scss";
+
+.friends-container {
+  margin-top: 30px;
+}
+
+.friends-list {
+  @extend %list;
+}

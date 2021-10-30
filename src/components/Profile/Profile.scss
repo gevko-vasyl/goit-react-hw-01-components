@@ -1,0 +1,43 @@
+@import "styles/shared.scss";
+
+.profile {
+  margin-top: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+  padding: 10px;
+  width: 400px;
+  background-color: $green;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.avatar {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100px;
+
+  border: 2px solid $black;
+  border-radius: 50%;
+}
+.name {
+  margin-top: 20px;
+}
+
+.stats {
+  @extend %list;
+  display: inline-block;
+}
+
+.stats-item {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 10px;
+
+  width: 100px;
+  height: 60px;
+  background-color: rgb(181, 188, 194);
+  border-radius: 10%;
+}
